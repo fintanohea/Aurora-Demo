@@ -65,7 +65,7 @@ export class TablesService {
         price: '$5 224.5',
         date: '19 Feb 2018',
         city: 'Seaforth',
-        status: 'declined'
+        status: 'terminated'
       },
       {
         name: 'Peter Horadnia',

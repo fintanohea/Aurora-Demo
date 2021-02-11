@@ -312,7 +312,7 @@ mat-tab-body div.mat-tab-body-content {
 }
 
 .toast-container .ngx-toastr {
-  padding: 16px;
+  // padding: 50px;
   border-radius: 45px;
 }
 
@@ -358,6 +358,76 @@ div.apexcharts-xaxistooltip-bottom:after {
 
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.custom-modalbox{
+  text-align: center;
+
+  .dialog-text {
+      color: $card-title-font-color;
+      font-size: $fs-medium;
+      font-weight: $fw-lighter;
+    }
+
+    button {
+      margin: 5px;
+
+      height: 41.6px;
+      width: auto;
+      line-height: 1.75;
+      font-size: 0.9375rem;
+      font-weight: 400;
+
+      box-sizing: border-box;
+      position: relative;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      -webkit-tap-highlight-color: transparent;
+      display: inline-block;
+      white-space: nowrap;
+      text-decoration: none;
+      vertical-align: baseline;
+      text-align: center;
+      margin: 0;
+      min-width: 64px;
+      line-height: 36px;
+      padding: 0 16px;
+      border-radius: 4px;
+      overflow: visible;
+    
+      @media (max-width: $small) {
+        margin-top: 16px;
+      }
+      
+      &.warn {
+        color: white;
+        background-color: $pink;
+      }
+      
+    
+    }
+
+    .mat-dialog-actions {
+      // align buttons to right as shown in Material Design guide
+      justify-content: center;
+    
+    .mat-button {
+      &:not(:first-child) {
+          margin-left: 1em;
+        }
+      }
+    }
+    
+    .flex-spacer {
+      flex: 1 1 auto;
+    }
+
+    
 }
 
 ::-webkit-scrollbar { width: 6px; height: 3px;}

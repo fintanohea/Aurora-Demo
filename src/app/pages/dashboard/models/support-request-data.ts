@@ -6,4 +6,5 @@ export interface SupportRequestData {
   date: string;
   city: string;
   status: string;
+  actions: boolean;
 }
