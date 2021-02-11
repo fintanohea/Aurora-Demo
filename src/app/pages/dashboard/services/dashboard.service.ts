@@ -74,7 +74,7 @@ export class DashboardService {
         28965.5,
         49340.7
       ],
-      firstDataTitle: '45% / 78°С / 78 Ghz',
+      firstDataTitle: 'Talent Acquisition',
       secondServerChartData: [
         18423.7,
         48423.5,
@@ -82,7 +82,7 @@ export class DashboardService {
         48481.85,
         18487.7
       ],
-      secondDataTitle: '57% / 45°С / 54 Ghz',
+      secondDataTitle: 'Sick Pay',
       thirdServerChartData: [
         17114.25,
         27126.6,
@@ -90,7 +90,7 @@ export class DashboardService {
         37203.7,
         17233.75
       ],
-      thirdDataTitle: '87% / 55°С / 76 Ghz',
+      thirdDataTitle: 'Overtime',
       dates: [
         '13 Nov 2017',
         '14 Nov 2017',
@@ -105,47 +105,52 @@ export class DashboardService {
     return of ([{
       name: 'Mark Otto',
       email: 'ottoto@wxample.com',
-      product: 'ON the Road',
+      product: 'Aurora',
       price: '$25 224.2',
       date: '11 May 2017',
       city: 'Otsego',
-      status: 'send'
+      status: 'active',
+      actions: true
     },
     {
       name: 'Jacob Thornton',
         email: 'thornton@wxample.com',
-      product: 'HP Core i7',
+      product: 'Aurora',
       price: '$1 254.2',
       date: '4 Jun 2017',
       city: 'Fivepointville',
-      status: 'send'
+      status: 'active',
+      actions: true
     },
     {
       name: 'Larry the Bird',
         email: 'bird@wxample.com',
-      product: 'Air Pro',
+      product: 'Aurora',
       price: '$1 570.0',
       date: '27 Aug 2017',
       city: 'Leadville North',
-      status: 'pending'
+      status: 'pending',
+      actions: true
     },
     {
       name: 'Joseph May',
         email: 'josephmay@wxample.com',
-      product: 'Version Control',
+      product: 'Aurora',
       price: '$5 224.5',
       date: '19 Feb 2018',
       city: 'Seaforth',
-      status: 'declined'
+      status: 'terminated',
+      actions: true
     },
     {
       name: 'Peter Horadnia',
         email: 'horadnia@wxample.com',
-      product: 'Let\'s Dance',
+      product: 'Aurora',
       price: '$43 594.7',
       date: '1 Mar 2018',
       city: 'Hanoverton',
-      status: 'send'
+      status: 'active',
+      actions: true
     }]);
   }
 
@@ -154,7 +159,7 @@ export class DashboardService {
       data: [7, 6, 3, 8, 10, 6, 7, 8, 3, 0, 7, 6, 2, 7, 4, 7, 3, 6, 2, 3, 8, 1, 0, 4, 9],
       registration: '860',
       signOut: '32',
-      rate: '3.25',
+      rate: '73.25',
       all: '12.678'
     });
   }

@@ -14,7 +14,8 @@
     justify-content: space-between;
 
     &-title {
-      font-size: $fs-medium;
+      font-size: 1.2vw;
+      white-space: nowrap;
       font-weight: $fw-lighter;
       margin: 0;
       line-height: 40px;

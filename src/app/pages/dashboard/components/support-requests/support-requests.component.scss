@@ -2,6 +2,14 @@
 @import 'src/app/styles/font';
 @import 'src/app/styles/variables';
 
+.custom-modalbox{
+
+  .dialog-text {
+      font-size: $fs-medium;
+      font-weight: $fw-lighter;
+    }
+}
+
 .support-requests {
   margin: 0 24px;
   padding: 0;
@@ -72,13 +80,21 @@
       text-transform: uppercase;
     }
   }
+
+  &__actions-icon {
+    cursor: pointer;
+
+    &:hover {
+      color: $pink;
+    }
+  }
 }
 
 mat-menu {
   position: absolute;
 }
 
-.send {
+.active {
   background-color: $green;
 }
 
@@ -86,6 +102,6 @@ mat-menu {
   background-color: $yellow;
 }
 
-.declined {
+.terminated {
   background-color: $pink;
 }

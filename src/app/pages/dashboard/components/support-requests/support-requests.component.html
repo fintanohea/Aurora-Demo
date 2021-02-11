@@ -1,18 +1,24 @@
 <mat-card class="support-requests">
   <mat-card-title class="support-requests__header">
-    <h5 class="support-requests__title">Support Requests</h5>
+    <h5 class="support-requests__title">Employees</h5>
     <app-settings-menu></app-settings-menu>
   </mat-card-title>
 
   <mat-card-content class="support-requests__content">
-    <table mat-table [dataSource]="supportRequestData" class="support-requests__table">
+    <table mat-table [dataSource]="supportRequestData" class="support-requests__table" #myTable>
 
       <ng-container  *ngFor="let column of displayedColumns" matColumnDef="{{column}}" class="support-requests__table-row">
-        <th mat-header-cell *matHeaderCellDef class="support-requests__table-row-title">{{column}}</th>
+        <th mat-header-cell *matHeaderCellDef class="support-requests__table-row-title">
+          <span *ngIf="column !== 'delete'">{{column}}</span>
+        </th>
         <td mat-cell *matCellDef="let element" class="support-requests__table-content">
-          <span *ngIf="column !== 'status'">{{element[column]}}</span>
+          <span *ngIf="column !== 'status' && column !== 'actions'">{{element[column]}}</span>
           <div *ngIf="column === 'status'" class="support-requests__content-badge" [ngClass]="element[column]">
             <span>{{element[column]}}</span>
+          </div>
+          <div *ngIf="column === 'actions'">
+            <mat-icon aria-hidden="false" class="support-requests__actions-icon" aria-label="delete icon">create</mat-icon>
+            <mat-icon (click)="openDialog(element)" aria-hidden="false" class="support-requests__actions-icon" aria-label="delete icon">delete</mat-icon>
           </div>
         </td>
       </ng-container>

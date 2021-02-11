@@ -1,0 +1,8 @@
+<h1 class="dialog-text" mat-dialog-title>{{data.name}} will be deleted permanently!</h1>
+<div mat-dialog-content>
+  <p>Are you sure you want to proceed?</p>
+</div>
+<div class="mat-dialog-actions" mat-dialog-actions>
+  <button mat-flat-button class="mat-button" (click)="onNoClick()">Cancel</button>
+  <button mat-button class="warn mat-button" (click)="onNoClick()" cdkFocusInitial>Delete</button>
+</div>
