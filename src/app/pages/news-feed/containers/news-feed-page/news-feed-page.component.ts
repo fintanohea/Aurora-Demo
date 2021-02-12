@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-news-feed-page',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./news-feed-page.component.scss']
 })
 export class NewsFeedPageComponent {
+  constructor(
+    private toastr: ToastrService
+  ) {}
+
   feedData = [
     {
       username: "Tom Jones",
@@ -15,7 +20,26 @@ export class NewsFeedPageComponent {
       title: "This Is the Future Of Remote Work In 2021",
       articleLink: "https://www.forbes.com/sites/carolinecastrillon/2021/12/27/this-is-the-future-of-remote-work-in-2021/?sh=660bc58a1e1d",
       content: "<p>The world witnessed a historic shift in the 2020 job market due to the Covid-19 pandemic.</p><p>While some companies used to offer the ability to work from home as a perk, it has now become the norm for most businesses.</p><p> By 2025, an estimated 70% of the workforce will be working remotely at least five days a month. While 2020 may be considered the year of remote work, it is just the beginning as we see the trend continuing in 2021.</p>",
-      like: true
+      like: true,
+      load: "Load",
+      commentsState: true,
+      comments: [
+        {
+          username: "Sarah Smith",
+          profilePic: "/assets/profile-pics/profile1.jpg",
+          comment: "Great article Tom!"
+        },
+        {
+          username: "Tommy Bowe",
+          profilePic: "/assets/profile-pics/profile4.png",
+          comment: "This Is awesome, I completely agree with you."
+        },
+        {
+          username: "Mary Quinn",
+          profilePic: "/assets/profile-pics/profile3.jpg",
+          comment: "Never going back to the office!"
+        }
+      ]
     },
     {
       username: "Sarah Smith",
@@ -25,7 +49,10 @@ export class NewsFeedPageComponent {
       title: "How a strong employer brand can decrease your time-to-hire and improve quality-of-hire",
       articleLink: "https://www.linkedin.com/pulse/how-strong-employer-brand-can-decrease-your-improve-alan-stanton/?trackingId=qWZ3rz6tF%2FAoICpQy0%2FZcw%3D%3D",
       content: "<p>As Talent Acquisition Leader for the largest imaging company in the world, Chris brings a wealth of experience and knowledge to this week's edition of the Wiser Words series. Having spent the last 20 years working in recruitment and talent acquisition, he is well-positioned to educate and inform us on topics in this space. </p><p>In this interview, he delves into the ongoing debate around time-to-hire and explains why and how a strong employer brand can decrease your cost per hire, save time and ensure that talent joins the business for the long haul.</p>",
-      like: false
+      like: false,
+      load: "Load",
+      commentsState: false,
+      comments: []
     },
     {
       username: "Mary Quinn",
@@ -35,7 +62,10 @@ export class NewsFeedPageComponent {
       title: "How to use the holidays to revive corporate culture",
       articleLink: "https://www.bizjournals.com/bizjournals/how-to/human-resources/2020/12/how-to-use-holidays-to-revive-corporate-culture.html",
       content: "<p>The 2020 holiday season is rapidly approaching, and it will be like none other in recent history.</p><p>The global coronavirus pandemic has left an indelible mark on how we live our lives and how companies operate. Businesses have worked incredibly hard to keep moving forward, focusing on immediate needs, creating work-from-home structures and retrofitting workspaces for increased safety. As all of those efforts unfolded, one likely casualty was company culture.</p>",
-      like: false
+      like: false,
+      load: "Load",
+      commentsState: false,
+      comments: []
     }
   ];
 
@@ -67,5 +97,24 @@ export class NewsFeedPageComponent {
   likeClick(post) {
     const index = this.feedData.indexOf(post);
     this.feedData[index].like ? this.feedData[index].like = false : this.feedData[index].like = true;
+  }
+
+  toggleComments(post) {
+    const index = this.feedData.indexOf(post);
+    this.feedData[index].load === "Load" ? this.feedData[index].load = "Close" : this.feedData[index].load = "Load";
+  }
+
+  postComment(comment, post) {
+    const index = this.feedData.indexOf(post);
+    let newComment = {
+        username: "John Smith",
+        profilePic: "/assets/profile-pics/stock-profile.png",
+        comment: comment
+    }
+
+    this.feedData[index].comments.unshift(newComment);
+    this.toastr.success(
+      '', `Comment posted successfully!`
+    );
   }
 }

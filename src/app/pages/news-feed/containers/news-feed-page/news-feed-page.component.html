@@ -1,11 +1,17 @@
 <app-layout>
-  <mat-toolbar class="page-header" role="heading">
+  <!-- <mat-toolbar class="page-header" role="heading">
     <h1>News Feed</h1>
-  </mat-toolbar>
+  </mat-toolbar> -->
 
-  <div class="container" fxLayout="row" fxLayoutAlign="space-around none" fxLayoutGap="50px">
+ 
 
-    <div class="feed" fxFlex="55%" fxLayout="column" fxLayoutAlign="space-between none" >
+  <div class="container" 
+      fxLayout="row" 
+      fxLayout.xs="column"
+      fxLayoutAlign="space-around none" 
+      fxLayoutGap="30px">
+
+    <div class="feed" fxFlex="65%" fxLayout="column" fxLayoutAlign="space-between none" >
       
       <mat-card *ngFor="let post of feedData" class="news-feed-content__item-wrapper">
         <mat-card-header>
@@ -31,17 +37,46 @@
             <mat-icon aria-hidden="false">share</mat-icon>
             SHARE
           </button>
-          <button mat-flat-button >
+          <button mat-flat-button>
             <mat-icon aria-hidden="false">comment</mat-icon>
             Comment
           </button>
         </mat-card-actions>
-      </mat-card>
+        <mat-card-footer>
 
-  
+          <mat-expansion-panel hideToggle [expanded]="post.commentsState" (opened)="toggleComments(post)" (closed)="toggleComments(post)">
+            <mat-expansion-panel-header>
+              <mat-panel-description 
+                class="center-aligned-header">
+                {{post.load}} Comments
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field class="comment-input" appearance="outline" (keyup.enter)="postComment($event.target.value, post)">
+              <mat-label>Add a comment</mat-label>
+              <input matInput>
+              <mat-icon matSuffix>crop_original</mat-icon>
+            </mat-form-field>
+
+            <mat-card *ngFor="let comment of post.comments" class="comment__item-wrapper">
+              <mat-card-header>
+                <div mat-card-avatar >
+                  <img mat-card-image [src]="comment.profilePic" style="border-radius: 50%; width: 143%; margin: -7px;">
+                </div>
+                <mat-card-title>{{comment.username}}</mat-card-title>
+                <mat-card-subtitle>{{comment.comment}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <!-- <p [innerHTML]="comment.comment"></p> -->
+              </mat-card-content>
+            </mat-card>
+          </mat-expansion-panel>
+
+        </mat-card-footer>
+      </mat-card>
     </div>
   
-    <div class="feed-side" fxFlex="25%">
+    <div class="feed-side" fxFlex="27%">
       <mat-card class="trending__item-wrapper">
         <mat-card-title fxLayout="row" fxLayoutAlign="space-between none" >
           <p>Trending</p>

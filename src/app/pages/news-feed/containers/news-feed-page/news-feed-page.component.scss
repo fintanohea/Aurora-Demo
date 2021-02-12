@@ -12,6 +12,22 @@
   }
 }
 
+.center-aligned-header {
+  justify-content: center !important;
+}
+
+.comment__item-wrapper {
+  box-shadow: none;
+  border-bottom-style: solid;
+  border-bottom-color: #c5c5c5;
+  border-bottom-width: thin;
+  border-radius: 0px;
+}
+
+.comment-input {
+  width: 100%;
+}
+
 .trending__item-post-wrapper{
   box-shadow: none;
   border-bottom-style: solid;
@@ -71,6 +87,8 @@
 
     }
   }
+
+  
 
   
 
