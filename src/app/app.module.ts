@@ -6,6 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -13,13 +14,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AuthModule } from './pages/auth/auth.module';
-import { NewsFeedComponent } from './pages/news-feed/news-feed.component';
+import { NewsFeedModule } from './pages/news-feed/news-feed.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
-    NewsFeedComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,9 @@ import { NewsFeedComponent } from './pages/news-feed/news-feed.component';
     ToastrModule.forRoot(),
     MatCardModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    NewsFeedModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

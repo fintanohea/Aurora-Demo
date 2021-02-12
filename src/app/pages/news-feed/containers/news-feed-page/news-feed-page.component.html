@@ -1,0 +1,72 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>News Feed</h1>
+  </mat-toolbar>
+
+  <div class="container" fxLayout="row" fxLayoutAlign="space-around none" fxLayoutGap="50px">
+
+    <div class="feed" fxFlex="55%" fxLayout="column" fxLayoutAlign="space-between none" >
+      
+      <mat-card *ngFor="let post of feedData" class="news-feed-content__item-wrapper">
+        <mat-card-header>
+          <div mat-card-avatar >
+            <img mat-card-image [src]="post.profilePic" style="border-radius: 50%; width: 143%; margin: -7px;">
+          </div>
+          <mat-card-title>{{post.username}}</mat-card-title>
+          <mat-card-subtitle>{{post.type}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="post.img">
+        <mat-card-content>
+          <h2 class="fw-medium news-feed-content__post-title">
+            <a [attr.href]="post.articleLink">{{post.title}}</a>
+          </h2>
+          <p class="news-feed-content__post-content" [innerHTML]="post.content"></p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [color]="post.like ? 'warn' : ''" (click)="likeClick(post)"> 
+            <mat-icon aria-hidden="false">thumb_up</mat-icon>
+            LIKE
+          </button>
+          <button mat-flat-button >
+            <mat-icon aria-hidden="false">share</mat-icon>
+            SHARE
+          </button>
+          <button mat-flat-button >
+            <mat-icon aria-hidden="false">comment</mat-icon>
+            Comment
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+  
+    </div>
+  
+    <div class="feed-side" fxFlex="25%">
+      <mat-card class="trending__item-wrapper">
+        <mat-card-title fxLayout="row" fxLayoutAlign="space-between none" >
+          <p>Trending</p>
+          <div>
+            <mat-icon aria-hidden="false" color="warn">trending_up</mat-icon>
+            <mat-icon aria-hidden="false">perm_identity</mat-icon>
+            <mat-icon aria-hidden="false">date_range</mat-icon>
+          </div>
+        </mat-card-title>
+        <div class="trending__item-headings">
+          <mat-card *ngFor="let post of trending" class="trending__item-post-wrapper">
+            <mat-card-header>
+            </mat-card-header>
+            <mat-card-content>
+              <h6 class="fw-medium trending__item-post-title">
+                <a [attr.href]="post.link">{{post.title}}</a>
+              </h6>
+              <p class="trending__item-post-content" [innerHTML]="post.text"></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+
+  <app-footer></app-footer>
+</app-layout>

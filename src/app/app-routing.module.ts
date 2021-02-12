@@ -12,6 +12,12 @@ const routes: Routes = [
     component: DashboardPageComponent
   },
   {
+    path: 'newsfeed',
+    pathMatch: 'full',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/news-feed/news-feed.module').then(m => m.NewsFeedModule)
+  },
+  {
     path: 'typography',
     pathMatch: 'full',
     canActivate: [AuthGuard],
