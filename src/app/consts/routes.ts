@@ -1,6 +1,7 @@
 export enum routes {
   DASHBOARD = '/dashboard',
   TYPOGRAPHY = '/typography',
+  NEWSFEED = '/newsfeed',
   TABLES = '/tables',
   NOTIFICATION = '/notification',
   UI_ELEMENTS_ICONS = '/ui/icons',
