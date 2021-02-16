@@ -83,10 +83,25 @@
       </div>
       
       <div 
+        *ngIf="!currentMessage"
+        fxFlex
+        class="no-convo-selected-container"
+      >
+        <div 
+          class="child">
+          <mat-icon>forum</mat-icon>
+          <div class="line1">Select an item to read</div>
+          <div class="line2">Nothing is selected</div>
+        </div>
+      </div>
+
+      <div 
+        *ngIf="currentMessage"
         fxFlex
         fxLayout="column"
         class="current-message-container"
       >
+        
         <div 
           class="current-message-header"
           fxFlex="8%"
@@ -100,7 +115,7 @@
             </h4>
             <div class="control-btns">
               <mat-icon>more_horiz</mat-icon>
-              <mat-icon>clear</mat-icon>
+              <mat-icon (click)="closeConvo()">clear</mat-icon>
             </div>
           </div>
         </div>
@@ -109,6 +124,7 @@
           fxFlex
           class="current-message-content"
         >
+          
           <div *ngFor="let message of currentMessage.messages">
             <div class="spacer" *ngIf="message.self" fxFlex="40%"></div>
 
