@@ -18,6 +18,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/news-feed/news-feed.module').then(m => m.NewsFeedModule)
   },
   {
+    path: 'inbox',
+    pathMatch: 'full',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/inbox/inbox.module').then(m => m.InboxModule)
+  },
+  {
     path: 'typography',
     pathMatch: 'full',
     canActivate: [AuthGuard],

@@ -1,0 +1,234 @@
+@import 'src/app/styles/colors';
+@import 'src/app/styles/variables';
+@import 'src/app/styles/font';
+
+.inbox-container {
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.inbox-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 0px !important;
+  background-color: white;
+  position: relative;
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    margin-top: 10px;
+
+    h2 {
+      float: left;
+    }
+
+    button {
+      float: right;
+    }
+  }
+}
+
+
+.inbox-content {
+  height: 100% !important;
+
+  .inbox-messages-container{
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+    .inbox-messages-filter {
+      background-color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 5px;
+      // height: 60px;
+
+      mat-icon {
+        vertical-align: -6px;
+        padding-left: 11px;
+
+        &:hover {
+          color: $hubbub-secondary;
+        }
+      }
+
+      .filter-input {
+        .mat-form-field-wrapper{
+          margin-bottom: -1.25em;
+          padding-bottom: -1.25em;
+        }
+
+        width: 90%;
+      }
+    }
+    .messages {
+      overflow: scroll;
+
+
+      .message-item {
+        cursor: pointer;
+        height: 85px !important;
+
+        &.selected {
+          background-color: $hubbub-primary-02;
+        }
+
+        &:hover {
+          background-color: $hubbub-primary-02;
+        }
+
+        .message-item-div {
+          width: 100%;
+
+          .message-top {
+            margin-bottom: 10px;
+            
+            .convo-people {
+              color: $hubbub-secondary;
+            }
+
+            .convo-time {
+              color: $grey;
+            }
+          }
+
+          .message-bottom {
+            .convo-text {
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .no-convo-selected-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      .line1 {
+        font-size: 20px;
+      }
+
+      .line2 {
+        color: #6E6E6E;
+      }
+
+      mat-icon{
+        font-size: 150px;
+        color: $hubbub-secondary;
+        position: relative;
+        margin-left: -120px;
+      }
+    }
+  }
+
+  .current-message-container {
+    .current-message-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      height: 71px;
+      position: static;
+      height: 100%;
+      background-color: white;
+
+      position: relative;
+      
+      .subject {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin-top: 10px;
+
+        span {
+          color: $hubbub-secondary;
+        }
+  
+        h4 {
+          float: left;
+        }
+
+        .control-btns {
+          float: right;
+
+          mat-icon {
+            cursor: pointer;
+            margin-left: 10px;
+  
+            &:hover {
+              color: $hubbub-secondary;
+            }
+          }
+        }
+      }
+
+    }
+
+    .current-message-content {
+      overflow: scroll;
+      height: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+      mat-card {
+        width: 60%;
+      }
+      
+      .my-message {
+        text-align: right;
+        
+        .my-name {
+          font-weight: 500;
+          font-size: 20px;
+          margin: 5px 0px 0px -17px !important;
+        }
+
+        .my-profile-pic {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          flex-shrink: 0;
+          object-fit: cover;
+        }
+      }
+
+      .mat-card-header-text{
+        width: 100% !important;
+      }      
+
+      mat-card-title {
+        margin: 5px 0px 0px -17px !important;
+      }
+    }
+
+    .current-message-input {
+      position: static;
+      background-color: white;
+      padding: 5px;
+
+      .comment-input {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        mat-icon {
+  
+          &:hover {
+            color: $hubbub-secondary;
+          }
+        }
+      }
+    }
+  }
+}
