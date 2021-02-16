@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { InboxPageComponent } from './containers';
 import { InboxRoutingModule } from './inbox-routing.module';
@@ -32,7 +33,8 @@ import { SharedModule } from '../../shared/shared.module';
     MatInputModule,
     MatGridListModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ]
 })
 export class InboxModule { }

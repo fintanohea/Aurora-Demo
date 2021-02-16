@@ -114,7 +114,18 @@
               Subject: {{currentMessage.title}}
             </h4>
             <div class="control-btns">
-              <mat-icon>more_horiz</mat-icon>
+                <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>search</mat-icon>
+                  <span>Search conversation</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>crop_original</mat-icon>
+                  <span>View photos & videos</span>
+                </button>
+              </mat-menu>
+
               <mat-icon (click)="closeConvo()">clear</mat-icon>
             </div>
           </div>

@@ -24,7 +24,7 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
         {
           user: "Mary",
           profilePic: "/assets/profile-pics/profile1.jpg",
-          text: "this is the message from me",
+          text: "We should get together Friday evening.",
           time: "1 hour ago",
           self: false
         },
@@ -82,20 +82,21 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
     {
       id: 1,
       selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
+      title: "Hello",
+      people: "Jane Hew",
       participants: [
         {
           id: 1,
-          name: "Mary Blank",
-          img: ""
+          name: "Jane Hew",
+          img: "/assets/profile-pics/stock-profile-woman.jpeg"
         }
       ],
       messages: [
         {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
+          user: "Jane Hew",
+          text: "Hey! How is it going?",
+          profilePic: "/assets/profile-pics/stock-profile-woman.jpeg",
+          time: "2 hours ago"
         }
       ]
     },
@@ -345,7 +346,7 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
 
   ngOnInit() {
-    // this.currentMessage = this.convos[0];
+    this.selectConvo(this.convos[0]);
   }
 
   ngAfterViewChecked() {        
