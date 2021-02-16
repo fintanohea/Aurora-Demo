@@ -15,6 +15,7 @@ import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AuthModule } from './pages/auth/auth.module';
 import { NewsFeedModule } from './pages/news-feed/news-feed.module';
+import { InboxModule } from './pages/inbox/inbox.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NewsFeedModule } from './pages/news-feed/news-feed.module';
     MatButtonModule,
     MatDialogModule,
     NewsFeedModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    InboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

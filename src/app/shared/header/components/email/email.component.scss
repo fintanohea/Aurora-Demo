@@ -3,12 +3,12 @@
 @import 'src/app/styles/variables';
 
 .email-button {
-  background-color: $blue;
+  background-color: $hubbub-primary;
   box-shadow: none;
   margin-left: 16px;
 
   &__icon {
-    color: $white-35;
+    color: $white-85;
   }
 
   &:hover {

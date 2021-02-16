@@ -1,0 +1,161 @@
+<app-layout>
+
+  <div 
+    class="inbox-container"
+    fxLayout="column" 
+    fxLayoutAlign=" stretch"
+    fxLayout.xs="column"
+    fxLayoutGap="30px"
+  >
+    <div 
+      class="inbox-header"
+      fxLayout="row" 
+      fxFlex="8%" 
+      fxFlex.lg="10%"
+      fxLayoutAlign="space-between stretch"
+    >
+      <div class="content">
+        <h2>Inbox</h2>
+        <button mat-flat-button >
+          <mat-icon aria-hidden="false">add</mat-icon>
+          NEW MESSAGE
+        </button>
+      </div>
+    </div>
+    <div 
+      class="inbox-content"
+      fxLayout="row" 
+      fxLayoutAlign=" stretch" 
+    >
+      <div 
+        fxFlex="40%" 
+        fxLayout="column"
+        class="inbox-messages-container"
+      >
+        <div 
+          fxFlex="8%" 
+          fxFlex.lg="12%" 
+          class="inbox-messages-filter"
+        >
+          <mat-form-field class="filter-input" appearance="outline">
+            <mat-label>Search inbox</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+
+          <mat-icon matSuffix>filter_alt</mat-icon>
+        </div>
+
+        <div 
+          fxFlex
+          class="messages"
+        >
+          <mat-list>
+            <span *ngFor="let convo of convos">
+              <mat-list-item 
+                class="message-item"
+                [ngClass]="convo.selected ? 'selected' : '' "
+                (click)=selectConvo(convo)>
+                <div
+                  class="message-item-div"
+                  fxLayout="column" 
+                  fxLayoutAlign=" stretch">
+                  <div
+                    class="message-top"
+                    fxLayout="row" 
+                    fxLayoutAlign="space-between none">
+                    <div class="convo-people">{{convo.people}}</div>
+                    <div class="convo-time">{{convo.messages[0].time}}</div>
+                  </div>
+                  <div
+                    class="message-bottom"
+                    fxLayout="column" 
+                    fxLayoutAlign="space-between stretch">
+                    <div class="convo-title">{{convo.title}}</div>
+                    <div class="convo-text">{{convo.messages[0].text}}</div>
+                  </div>
+                </div>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </span>
+          </mat-list>
+        </div>
+      </div>
+      
+      <div 
+        fxFlex
+        fxLayout="column"
+        class="current-message-container"
+      >
+        <div 
+          class="current-message-header"
+          fxFlex="8%"
+          fxFlex.lg="12%" 
+          fxLayout="row" 
+          fxLayoutAlign="space-between none"
+        >
+          <div class="subject">
+            <h4>
+              Subject: {{currentMessage.title}}
+            </h4>
+            <div class="control-btns">
+              <mat-icon>more_horiz</mat-icon>
+              <mat-icon>clear</mat-icon>
+            </div>
+          </div>
+        </div>
+        <div 
+          #scrollMe
+          fxFlex
+          class="current-message-content"
+        >
+          <div *ngFor="let message of currentMessage.messages">
+            <div class="spacer" *ngIf="message.self" fxFlex="40%"></div>
+
+            <mat-card fxFlex [ngClass]="message.self ? 'my-message' : '' ">
+              <mat-card-header *ngIf="message.self"
+                fxLayout="row" 
+                fxLayoutAlign="end none"
+              >
+                <div class="my-name">{{message.user}}</div>
+                <div class="my-profile-pic">
+                  <img mat-card-image [src]="message.profilePic" style="border-radius: 50%; width: 80%; margin: -1px;">
+                </div>
+              </mat-card-header>
+  
+              <mat-card-header *ngIf="!message.self">
+                <mat-card-title>{{message.user}}</mat-card-title>
+                <div mat-card-avatar>
+                  <img mat-card-image [src]="message.profilePic" style="border-radius: 50%; width: 80%; margin: -1px;">
+                </div>
+              </mat-card-header>
+  
+              <mat-card-content>
+                {{message.text}}
+              </mat-card-content>
+            </mat-card>
+
+            <div class="spacer" *ngIf="!message.self" fxFlex="40%"></div>
+          </div>
+
+
+          
+        </div>
+        <div 
+          fxFlex="10%"
+          fxFlex.lg="12%" 
+          class="current-message-input"
+        >
+          <mat-form-field class="comment-input" appearance="outline" (keyup.enter)="postComment($event.target.value, currentMessage)">
+            <mat-label>Add a comment</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>crop_original</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <app-footer></app-footer> -->
+</app-layout>

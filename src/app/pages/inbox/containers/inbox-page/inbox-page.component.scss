@@ -1,0 +1,393 @@
+@import 'src/app/styles/colors';
+@import 'src/app/styles/variables';
+@import 'src/app/styles/font';
+
+.inbox-container {
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.inbox-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 0px !important;
+  background-color: white;
+  position: relative;
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    margin-top: 10px;
+
+    h2 {
+      float: left;
+    }
+
+    button {
+      float: right;
+    }
+  }
+}
+
+
+.inbox-content {
+  height: 100% !important;
+
+  .inbox-messages-container{
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+    .inbox-messages-filter {
+      background-color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 5px;
+      // height: 60px;
+
+      mat-icon {
+        vertical-align: -6px;
+        padding-left: 11px;
+
+        &:hover {
+          color: $hubbub-secondary;
+        }
+      }
+
+      .filter-input {
+        .mat-form-field-wrapper{
+          margin-bottom: -1.25em;
+          padding-bottom: -1.25em;
+        }
+
+        width: 90%;
+      }
+    }
+    .messages {
+      overflow: scroll;
+
+
+      .message-item {
+        cursor: pointer;
+        height: 85px !important;
+
+        &.selected {
+          background-color: $hubbub-primary-02;
+        }
+
+        &:hover {
+          background-color: $hubbub-primary-02;
+        }
+
+        .message-item-div {
+          width: 100%;
+
+          .message-top {
+            margin-bottom: 10px;
+            
+            .convo-people {
+              color: $hubbub-secondary;
+            }
+
+            .convo-time {
+              color: $grey;
+            }
+          }
+
+          .message-bottom {
+            .convo-text {
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .current-message-container {
+    .current-message-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      height: 71px;
+      position: static;
+      height: 100%;
+      background-color: white;
+
+      position: relative;
+      
+      .subject {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin-top: 10px;
+
+        span {
+          color: $hubbub-secondary;
+        }
+  
+        h4 {
+          float: left;
+        }
+
+        .control-btns {
+          float: right;
+
+          mat-icon {
+            cursor: pointer;
+            margin-left: 10px;
+  
+            &:hover {
+              color: $hubbub-secondary;
+            }
+          }
+        }
+      }
+
+    }
+
+    .current-message-content {
+      overflow: scroll;
+      height: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+      mat-card {
+        width: 60%;
+      }
+      
+      .my-message {
+        text-align: right;
+        
+        .my-name {
+          font-weight: 500;
+          font-size: 20px;
+          margin: 5px 0px 0px -17px !important;
+        }
+
+        .my-profile-pic {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          flex-shrink: 0;
+          object-fit: cover;
+        }
+      }
+
+      .mat-card-header-text{
+        width: 100% !important;
+      }      
+
+      mat-card-title {
+        margin: 5px 0px 0px -17px !important;
+      }
+    }
+
+    .current-message-input {
+      position: static;
+      background-color: white;
+      padding: 5px;
+
+      .comment-input {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        mat-icon {
+  
+          &:hover {
+            color: $hubbub-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// .container {
+//   width: 95%;
+
+//   .feed-side{
+//     position: sticky;
+//     top: 0;
+//     align-self: flex-start;
+//   }
+// }
+
+// .center-aligned-header {
+//   justify-content: center !important;
+// }
+
+// .comment__item-wrapper {
+//   box-shadow: none;
+//   border-bottom-style: solid;
+//   border-bottom-color: #c5c5c5;
+//   border-bottom-width: thin;
+//   border-radius: 0px;
+// }
+
+// .comment-input {
+//   width: 100%;
+// }
+
+// .trending__item-post-wrapper{
+//   box-shadow: none;
+//   border-bottom-style: solid;
+//   border-bottom-color: #797979;
+//   border-bottom-width: thin;
+//   border-radius: 0px;
+// }
+
+// .trending__item-post-title {
+//   a:link {
+//     text-decoration: none;
+//     color: $hubbub-secondary;
+//   }
+  
+//   a:visited {
+//     text-decoration: none;
+//     color: $hubbub-secondary;
+
+//   }
+  
+//   a:hover {
+//     text-decoration: underline;
+//     color: $hubbub-secondary;
+
+//   }
+  
+//   a:active {
+//     text-decoration: underline;
+//     color: $hubbub-secondary;
+
+//   }
+// }
+
+// .news-feed-content {
+
+//   &__post-title {
+//     a:link {
+//       text-decoration: none;
+//       color: #4A4A4A;
+//     }
+    
+//     a:visited {
+//       text-decoration: none;
+//       color: #4A4A4A;
+
+//     }
+    
+//     a:hover {
+//       text-decoration: underline;
+//       color: $hubbub-secondary;
+
+//     }
+    
+//     a:active {
+//       text-decoration: underline;
+//       color: #4A4A4A;
+
+//     }
+//   }
+
+  
+
+  
+
+//   &__wrapper {
+//     display: flex;
+//     padding: 0 8px;
+
+//     @media (max-width: $small) {
+//       flex-wrap: wrap;
+//     }
+//   }
+
+//   &__item-wrapper {
+//     box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A;
+//     width: 100%;
+//     margin: 16px;
+//   }
+
+//   &__headings, &__colors, &__settings, &__size {
+//     margin-top: 8px;
+//     border: 1px dashed $blue;
+//     padding: 32px 16px;
+
+//     h1 {
+//       @media (max-width: $small) {
+//         line-height: 46px;
+//       }
+//     }
+//   }
+
+//   &__colors {
+//     &_blue {
+//       color: $blue;
+//     }
+
+//     &_hubbub-secondary {
+//       color: $hubbub-secondary;
+//     }
+
+//     &_hubbub-secondary {
+//       color: $hubbub-secondary;
+//     }
+
+//     &_yellow {
+//       color: $yellow;
+//     }
+
+//     &_light-blue {
+//       color: $light-blue;
+//     }
+
+//     &_violet {
+//       color: $violet;
+//     }
+//   }
+// }
+
+// .fw-light {
+//   font-weight: $fw-lighter;
+// }
+
+// .fw-medium {
+//   font-weight: $fw-normal;
+// }
+
+// .fw-bold {
+//   font-weight: $fw-bold;
+// }
+
+// .font-uppercase {
+//   text-transform: uppercase;
+// }
+
+// .font-lowercase {
+//   text-transform: lowercase;
+// }
+
+// .fst-italic {
+//   font-style: italic;
+// }
+
+// .fs-sm {
+//   font-size: $fs-xs;
+// }
+
+// .fs-regular {
+//   font-size: $fs-small;
+// }
+
+// .fs-md {
+//   font-size: $fs-medium;
+// }
+
+// .fs-xl {
+//   font-size: $fs-xl;
+// }
+
+// .fs-xxl {
+//   font-size: $fs-xxxl;
+// }
