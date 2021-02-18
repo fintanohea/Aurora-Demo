@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-  public isShowInput = false;
+  public isShowInput = true;
 
   public showInput(): void {
     this.isShowInput = true;

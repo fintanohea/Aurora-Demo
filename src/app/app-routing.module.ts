@@ -24,10 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inbox/inbox.module').then(m => m.InboxModule)
   },
   {
-    path: 'typography',
+    path: 'employees',
     pathMatch: 'full',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./pages/typography/typography.module').then(m => m.TypographyModule)
+    loadChildren: () => import('./pages/employees/employees.module').then(m => m.EmployeeModule)
   },
   {
     path: 'tables',
@@ -40,11 +40,6 @@ const routes: Routes = [
     pathMatch: 'full',
     canActivate: [AuthGuard],
     loadChildren: () => import('./pages/notification/notification.module').then(m => m.NotificationModule)
-  },
-  {
-    path: 'ui',
-    canActivate: [AuthGuard],
-    loadChildren: () => import('./pages/ui-elements/ui-elements.module').then(m => m.UiElementsModule)
   },
   {
     path: '404',

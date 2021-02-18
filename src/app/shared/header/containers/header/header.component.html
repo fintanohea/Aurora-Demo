@@ -5,11 +5,13 @@
       <mat-icon *ngIf="!isMenuOpened" class="header__title-button-icon">menu</mat-icon>
       <mat-icon *ngIf="isMenuOpened" class="header__title-button-icon">arrow_back</mat-icon>
     </button>
-    <h6 class="header__title-text">Hubbub HR</h6>
+    <img src="assets/HubbubHrLogo.png">
+    <!-- <h6 class="header__title-text">Hubbub HR</h6> -->
   </div>
 
+  <app-search></app-search>
+
   <div class="header-toolbar">
-    <app-search></app-search>
     <app-notifications></app-notifications>
     <app-email [emails]="emails$ | async"></app-email>
     <app-user [user]="user$ | async" (signOut)="signOut()"></app-user>
