@@ -34,6 +34,12 @@
     </button>
     <mat-menu #mail="matMenu" yPosition="above">
       <button mat-menu-item>
+      <img class="ms-icon" src="assets/icons/Outlook_40x40.svg" style="width: 50px;
+        margin-right: 10px;
+        margin-left: -15px;
+        vertical-align: middle;">Outlook - Send email
+      </button>
+      <button mat-menu-item>
         <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-google mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-google"></mat-icon>
         Gmail - Send email
       </button>
@@ -48,20 +54,37 @@
     </button>
     <mat-menu #video="matMenu" yPosition="above">
       <button mat-menu-item>
-        <mat-icon>videocam</mat-icon>Zoom - Meet now
+        <img 
+          class="ms-icon" 
+          src="assets/icons/Microsoft Teams_40x40.svg" 
+          style="width: 50px;
+          margin-right: 10px;
+          margin-left: -15px;
+          vertical-align: middle;">MS Teams - Meet now
       </button>
       <button mat-menu-item >
-        <mat-icon>videocam</mat-icon>Zoom - Schedule a meeting
+        <img 
+          class="ms-icon" 
+          src="assets/icons/Microsoft Teams_40x40.svg" 
+          style="width: 50px;
+          margin-right: 10px;
+          margin-left: -15px;
+          vertical-align: middle;">MS Teams - Schedule a meeting
       </button>
     </mat-menu>
-
     <button mat-mini-fab [matMenuTriggerFor]="dm">
       <mat-icon>forum</mat-icon>
     </button>
     <mat-menu #dm="matMenu" yPosition="above">
       <button mat-menu-item>
-        <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-wechat mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-wechat"></mat-icon>
-        Wechat - Create message
+        <!-- <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-microsoft mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-microsoft"></mat-icon> -->
+        <img 
+          class="ms-icon" 
+          src="assets/icons/Microsoft Teams_40x40.svg" 
+          style="width: 50px;
+          margin-right: 10px;
+          margin-left: -15px;
+          vertical-align: middle;">MS Teams - Create message
       </button>
       <button mat-menu-item >
         <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-slack mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-slack"></mat-icon>

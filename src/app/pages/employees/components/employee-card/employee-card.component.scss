@@ -41,9 +41,18 @@
     }
   }
 
+  
+  
   mat-card-actions {
     margin-bottom: 10px;
-
+    
+    .ms-icon {
+      width: 50px;
+      margin-right: 7px;
+      margin-left: -15px;
+      vertical-align: middle;
+    }
+    
     button {
       height: 40px !important;
       width: 40px !important;
