@@ -12,7 +12,7 @@ import { SupportRequestData } from '../../models/support-request-data';
 })
 export class SupportRequestsComponent {
   @Input() supportRequestData: SupportRequestData[];
-  public displayedColumns: string[] = ['name', 'email', 'product', 'price', 'date', 'city', 'status', 'actions'];
+  public displayedColumns: string[] = ['name', 'email', 'position', 'wage', 'joinDate', 'city', 'status', 'actions'];
   @ViewChild('myTable') myTable: MatTable<any>;
 
   constructor(

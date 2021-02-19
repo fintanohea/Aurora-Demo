@@ -26,6 +26,7 @@ import {
   ProjectStatChartComponent
 } from './components';
 import { SharedModule } from '../../shared/shared.module';
+import { EmployeeModule } from '../employees/employees.module';
 import { DashboardService } from './services';
 
 
@@ -56,7 +57,8 @@ import { DashboardService } from './services';
     MatInputModule,
     NgApexchartsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    EmployeeModule
   ],
   exports: [
     DailyLineChartComponent

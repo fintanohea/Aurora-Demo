@@ -13,46 +13,60 @@ export class EmployeeService {
     return of(
       [
         {
-            name: "John Wick",
+            name: "Tom Jones",
             email: "johnwick@gmail.com",
-            profileImg: "/assets/profile-pics/profile1.jpg",
+            profileImg: "/assets/profile-pics/profile2.jpg",
             location: "Vancouver, BC",
             position: "Regional Director"
         },
         {
-            name: "Frank Abigale",
+            name: "Sarah Smith",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile1.jpg",
             location: "Vancouver, BC",
-            position: "Regional Director"
+            position: "Senior Sale Manager"
         },
         {
-            name: "Steve Williams",
+            name: "Tommy Bowe",
             email: "johnwick@gmail.com",
-            profileImg: "/assets/profile-pics/profile1.jpg",
+            profileImg: "/assets/profile-pics/profile4.png",
             location: "Vancouver, BC",
-            position: "Regional Director"
+            position: "Digital Marketing Team Lead"
         },
         {
-            name: "Jenn Marsh",
+            name: "Mary Quinn",
             email: "johnwick@gmail.com",
-            profileImg: "/assets/profile-pics/profile1.jpg",
+            profileImg: "/assets/profile-pics/profile3.jpg",
             location: "Vancouver, BC",
-            position: "Regional Director"
+            position: "Java Developer"
         },
         {
             name: "Rebecca Jones",
             email: "johnwick@gmail.com",
-            profileImg: "/assets/profile-pics/profile1.jpg",
+            profileImg: "/assets/profile-pics/profile8.jpg",
             location: "Vancouver, BC",
-            position: "Regional Director"
+            position: "Software Application Developer"
         },
         {
-            name: "Jodie Foster",
+            name: "Dave Sterling",
             email: "johnwick@gmail.com",
-            profileImg: "/assets/profile-pics/profile1.jpg",
+            profileImg: "/assets/profile-pics/profile6.jpg",
             location: "Vancouver, BC",
-            position: "Regional Director"
+            position: "Compensation Manager"
+        },
+        {
+            name: "Louis Rossman",
+            email: "johnwick@gmail.com",
+            profileImg: "/assets/profile-pics/profile5.jpg",
+            location: "Vancouver, BC",
+            position: "Analyst Business Development"
+        },
+        {
+            name: "Amanda Burkley",
+            email: "johnwick@gmail.com",
+            profileImg: "/assets/profile-pics/profile7.jpg",
+            location: "Vancouver, BC",
+            position: "Client Service Manager"
         }
       ]
     );

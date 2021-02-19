@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule} from '@angular/material/menu';
 
 
 import {
@@ -33,7 +34,11 @@ import { SharedModule } from '../../shared/shared.module';
     MatIconModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule
+  ],
+  exports: [
+    EmployeesPageComponent
   ]
 })
 export class EmployeeModule { }

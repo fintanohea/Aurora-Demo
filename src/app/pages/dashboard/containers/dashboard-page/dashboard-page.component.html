@@ -18,12 +18,16 @@
       <app-revenue-chart [revenueCharData]="revenueChartData$ | async"></app-revenue-chart>
     </div>
   </div>
+
+  <div class="employees-container">
+    <app-employees-page></app-employees-page>
+  </div>
   
   <app-support-requests [supportRequestData]="supportRequestData$ | async"></app-support-requests>
 
-  <app-daily-line-chart [dailyLineChartData]="dailyLineChartData$ | async"></app-daily-line-chart>
+  <!-- <app-daily-line-chart [dailyLineChartData]="dailyLineChartData$ | async"></app-daily-line-chart>
 
-  <app-project-stat-chart [projectsStatsData]="projectsStatsData$ | async"></app-project-stat-chart>
+  <app-project-stat-chart [projectsStatsData]="projectsStatsData$ | async"></app-project-stat-chart> -->
 
   <app-footer></app-footer>
 </app-layout>
