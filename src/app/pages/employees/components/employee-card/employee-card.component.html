@@ -1,20 +1,72 @@
-<mat-card class="employee-card">
+<mat-card class="employee-card" fxLayout="column" fxLayoutAlign="space-around center">
   <!-- <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{employee.name}}</mat-card-title>
     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
   </mat-card-header> -->
-  <img 
-    class="profile-pic"
-    mat-card-image 
-    [src]="employee.profileImg">
+  <div class="profile-pic-container" fxLayout="column" fxLayoutAlign="space-around center">
+    <img 
+      class="profile-pic"
+      mat-card-image 
+      [src]="employee.profileImg">
+  </div>
   <mat-card-content>
     <div class="name">{{employee.name}}</div>
-    <div class="podition">{{employee.position}}</div>
-    <div class="location">{{employee.location}}</div>
+    <div class="position">{{employee.position | uppercase }}</div>
+    <div class="location"><mat-icon>location_on</mat-icon> {{employee.location}}</div>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+  <mat-card-actions fxLayoutGap="5px">
+    <button mat-mini-fab [matMenuTriggerFor]="phone">
+      <mat-icon>phone</mat-icon>
+    </button>
+    <mat-menu #phone="matMenu" yPosition="above">
+      <button mat-menu-item>
+        <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-google mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-google"></mat-icon>
+        Google - Call through Google
+      </button>
+      <button mat-menu-item >
+        <mat-icon>phone</mat-icon>Phone - 778-456-4352
+      </button>
+    </mat-menu>
+
+    <button mat-mini-fab [matMenuTriggerFor]="mail">
+      <mat-icon>mail_outline</mat-icon>
+    </button>
+    <mat-menu #mail="matMenu" yPosition="above">
+      <button mat-menu-item>
+        <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-google mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-google"></mat-icon>
+        Gmail - Send email
+      </button>
+      <button mat-menu-item >
+        <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-yahoo mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-yahoo"></mat-icon>
+        Yahoo - Send email
+      </button>
+    </mat-menu>
+
+    <button mat-mini-fab [matMenuTriggerFor]="video">
+      <mat-icon>videocam</mat-icon>
+    </button>
+    <mat-menu #video="matMenu" yPosition="above">
+      <button mat-menu-item>
+        <mat-icon>videocam</mat-icon>Zoom - Meet now
+      </button>
+      <button mat-menu-item >
+        <mat-icon>videocam</mat-icon>Zoom - Schedule a meeting
+      </button>
+    </mat-menu>
+
+    <button mat-mini-fab [matMenuTriggerFor]="dm">
+      <mat-icon>forum</mat-icon>
+    </button>
+    <mat-menu #dm="matMenu" yPosition="above">
+      <button mat-menu-item>
+        <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-wechat mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-wechat"></mat-icon>
+        Wechat - Create message
+      </button>
+      <button mat-menu-item >
+        <mat-icon _ngcontent-pui-c229="" role="img" fontset="fa fa-fs" class="mat-icon notranslate fa fa-slack mat-icon-no-color" aria-hidden="true" ng-reflect-font-set="fa fa-fs" ng-reflect-font-icon="fa-slack"></mat-icon>
+        Slack - Create message
+      </button>
+    </mat-menu>
   </mat-card-actions>
 </mat-card>

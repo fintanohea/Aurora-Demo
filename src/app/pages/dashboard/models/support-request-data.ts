@@ -1,9 +1,9 @@
-export interface SupportRequestData {
+export interface  SupportRequestData {
   name: string;
   email: string;
-  product: string;
-  price: string;
-  date: string;
+  position: string;
+  wage: string;
+  joinDate: string;
   city: string;
   status: string;
   actions: boolean;

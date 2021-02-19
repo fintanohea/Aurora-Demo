@@ -1,13 +1,15 @@
-<app-layout>
-  <h1>EMPLOYEE PAGE</h1>
+<mat-card class="employee-page-card">
+  <mat-card-title class="header">
+    <h5 >Employees</h5>
+  </mat-card-title>
 
-  <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of employees$ | async">
-      <app-employee-card 
-        [employee]="employee"
-      ></app-employee-card>
+  <mat-card-content>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of employees$ | async">
+        <app-employee-card 
+          [employee]="employee"
+        ></app-employee-card>
+      </div>
     </div>
-  </div>
-
-  <app-footer></app-footer>
-</app-layout>
+  </mat-card-content>
+</mat-card>
