@@ -12,17 +12,17 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
       id: 1,
       selected: false,
       title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
+      people: "Sarah, Mary and 2 others",
       participants: [
         {
           id: 1,
-          name: "Mary Blank",
+          name: "Sarah Smith Blank",
           img: ""
         }
       ],
       messages: [
         {
-          user: "Mary",
+          user: "Sarah Smith",
           profilePic: "/assets/profile-pics/profile1.jpg",
           text: "We should get together Friday evening.",
           time: "1 hour ago",
@@ -31,19 +31,19 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
         {
           user: "John Smith",
           profilePic: "/assets/profile-pics/stock-profile.png",
-          text: "sounds good",
+          text: "Im in",
           time: "1 hour ago",
           self: true
         },
         {
-          user: "John Wick",
+          user: "Tom Jones",
           profilePic: "/assets/profile-pics/profile2.jpg",
           text: "Yeah thats a great idea, lets do that",
           time: "1 hour ago",
           self: false
         },
         {
-          user: "Mark Ward",
+          user: "Mary Quinn",
           profilePic: "/assets/profile-pics/profile3.jpg",
           text: "I will contact the venue and book a table",
           time: "1 hour ago",
@@ -57,14 +57,14 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
           self: true
         },
         {
-          user: "Mary",
+          user: "Sarah Smith",
           profilePic: "/assets/profile-pics/profile1.jpg",
           text: "Awesome!",
           time: "1 hour ago",
           self: false
         },
         {
-          user: "John Wick",
+          user: "Tom Jones",
           profilePic: "/assets/profile-pics/profile2.jpg",
           text: "See you there",
           time: "1 hour ago",
@@ -73,7 +73,7 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
         {
           user: "John Smith",
           profilePic: "/assets/profile-pics/stock-profile.png",
-          text: "sounds good",
+          text: "See you there guys.",
           time: "1 hour ago",
           self: true
         }
@@ -96,247 +96,138 @@ export class InboxPageComponent implements OnInit, AfterViewChecked {
           user: "Jane Hew",
           text: "Hey! How is it going?",
           profilePic: "/assets/profile-pics/stock-profile-woman.jpeg",
-          time: "2 hours ago"
+          time: "2 hours ago",
+          self: false
         }
       ]
     },
     {
       id: 1,
       selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
+      title: "Marketing meeting minutes",
+      people: "Tom Jones",
       participants: [
         {
           id: 1,
-          name: "Mary Blank",
+          name: "Sarah Smith Blank",
           img: ""
         }
       ],
       messages: [
         {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
+          user: "Tom Jones",
+          profilePic: "/assets/profile-pics/profile2.jpg",
+          text: "Hey John",
+          time: "4 days ago",
+          self: false
+        },
+        {
+          user: "Tom Jones",
+          profilePic: "/assets/profile-pics/profile2.jpg",
+          text: "Do you have the minutes from the marketing meeting last week?",
+          time: "4 days ago",
+          self: false
+        },
+        {
+          user: "John Smith",
+          profilePic: "/assets/profile-pics/stock-profile.png",
+          text: "No I dot have them, I'm sure Mary will know who has them.",
+          time: "4 days ago",
+          self: true
         }
       ]
     },
     {
       id: 1,
       selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
+      title: "New hires",
+      people: "Tommy and Rebecca",
       participants: [
         {
           id: 1,
-          name: "Mary Blank",
+          name: "Sarah Smith Blank",
           img: ""
         }
       ],
       messages: [
         {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
+          user: "Tommy Bowe",
+          profilePic: "/assets/profile-pics/profile4.png",
+          text: "Hey guys, do we have any updates on the new hire reports?",
+          time: "4 days ago",
+          self: false
+        },
+        {
+          user: "John Smith",
+          profilePic: "/assets/profile-pics/stock-profile.png",
+          text: "Yes, Dave sent me the reports to look over before he finalised data",
+          time: "4 days ago",
+          self: true
+        },
+        {
+          user: "Rebecca Jones",
+          profilePic: "/assets/profile-pics/profile8.jpg",
+          text: "Great news, thanks for the updates!",
+          time: "4 days ago",
+          self: false
         }
       ]
     },
     {
       id: 1,
       selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
+      title: "HR Webinar",
+      people: "Louis and Rebecca",
       participants: [
         {
           id: 1,
-          name: "Mary Blank",
+          name: "Sarah Smith Blank",
           img: ""
         }
       ],
       messages: [
         {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
+          user: "Louis Rossman",
+          profilePic: "/assets/profile-pics/profile5.jpg",
+          text: "Are you both signed up for the HR webinar coming up?",
+          time: "5 days ago",
+          self: false
+        },
+        {
+          user: "John Smith",
+          profilePic: "/assets/profile-pics/stock-profile.png",
+          text: "I signed up but it might clash with a team meeting.",
+          time: "5 days ago",
+          self: true
+        },
+        {
+          user: "Rebecca Jones",
+          profilePic: "/assets/profile-pics/profile8.jpg",
+          text: "Yeah I have registed. I'm looking forward to see the new updates.",
+          time: "5 days ago",
+          self: false
         }
       ]
     },
     {
       id: 1,
       selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
+      title: "Welcome to the team!",
+      people: "Dave Sterling",
       participants: [
         {
           id: 1,
-          name: "Mary Blank",
+          name: "Sarah Smith Blank",
           img: ""
         }
       ],
       messages: [
         {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
-        }
-      ]
-    },
-    {
-      id: 1,
-      selected: false,
-      title: "Fridays event ideas?",
-      people: "Mary, Frank and 2 others",
-      participants: [
-        {
-          id: 1,
-          name: "Mary Blank",
-          img: ""
-        }
-      ],
-      messages: [
-        {
-          user: "Mary",
-          text: "this is the message from me",
-          time: "1 hour ago"
+          user: "Dave Sterling",
+          profilePic: "/assets/profile-pics/profile6.jpg",
+          text: "Welcome to the team John",
+          time: "5 days ago",
+          self: false
         }
       ]
     }

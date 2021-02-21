@@ -146,14 +146,24 @@
               >
                 <div class="my-name">{{message.user}}</div>
                 <div class="my-profile-pic">
-                  <img mat-card-image [src]="message.profilePic" style="border-radius: 50%; width: 80%; margin: -1px;">
+                  <img mat-card-image [src]="message.profilePic" 
+                  style="border-radius: 50%; 
+                  width: 35px;
+                  height: 35px;
+                  margin: -1px;
+                  object-fit: cover;">
                 </div>
               </mat-card-header>
   
               <mat-card-header *ngIf="!message.self">
                 <mat-card-title>{{message.user}}</mat-card-title>
                 <div mat-card-avatar>
-                  <img mat-card-image [src]="message.profilePic" style="border-radius: 50%; width: 80%; margin: -1px;">
+                  <img mat-card-image [src]="message.profilePic" 
+                  style="border-radius: 50%; 
+                  width: 35px;
+                  height: 35px;
+                  margin: -1px;
+                  object-fit: cover;">
                 </div>
               </mat-card-header>
   

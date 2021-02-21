@@ -97,6 +97,10 @@
           .message-bottom {
             .convo-text {
               color: $grey;
+              width: 85%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
           }
         }
