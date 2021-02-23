@@ -30,15 +30,15 @@
         </mat-card-content>
         <mat-card-actions>
           <button mat-button [color]="post.like ? 'warn' : ''" (click)="likeClick(post)"> 
-            <mat-icon aria-hidden="false">thumb_up</mat-icon>
+            <mat-icon class="material-icons-outlined"  aria-hidden="false">thumb_up</mat-icon>
             LIKE
           </button>
           <button mat-flat-button >
-            <mat-icon aria-hidden="false">share</mat-icon>
+            <mat-icon class="material-icons-outlined"  aria-hidden="false">share</mat-icon>
             SHARE
           </button>
           <button mat-flat-button>
-            <mat-icon aria-hidden="false">comment</mat-icon>
+            <mat-icon class="material-icons-outlined"  aria-hidden="false">comment</mat-icon>
             Comment
           </button>
         </mat-card-actions>
@@ -55,7 +55,7 @@
             <mat-form-field class="comment-input" appearance="outline" (keyup.enter)="postComment($event.target.value, post)">
               <mat-label>Add a comment</mat-label>
               <input matInput>
-              <mat-icon matSuffix>crop_original</mat-icon>
+              <mat-icon class="material-icons-outlined"  matSuffix>crop_original</mat-icon>
             </mat-form-field>
 
             <mat-card *ngFor="let comment of post.comments" class="comment__item-wrapper">
@@ -81,9 +81,9 @@
         <mat-card-title fxLayout="row" fxLayoutAlign="space-between none" >
           <p>Trending</p>
           <div>
-            <mat-icon aria-hidden="false" color="warn">trending_up</mat-icon>
-            <mat-icon aria-hidden="false">perm_identity</mat-icon>
-            <mat-icon aria-hidden="false">date_range</mat-icon>
+            <mat-icon class="material-icons-outlined"  aria-hidden="false" color="warn">trending_up</mat-icon>
+            <mat-icon class="material-icons-outlined"  aria-hidden="false">perm_identity</mat-icon>
+            <mat-icon class="material-icons-outlined"  aria-hidden="false">date_range</mat-icon>
           </div>
         </mat-card-title>
         <div class="trending__item-headings">

@@ -8,11 +8,11 @@
   <mat-card-content>
     <div class="name">{{employee.name}}</div>
     <div class="position">{{employee.position | uppercase }}</div>
-    <div class="location"><mat-icon>location_on</mat-icon> {{employee.location}}</div>
+    <div class="location"><mat-icon class="material-icons-outlined">location_on</mat-icon> {{employee.location}}</div>
   </mat-card-content>
   <mat-card-actions fxLayoutGap="5px">
     <button mat-mini-fab [matMenuTriggerFor]="phone">
-      <mat-icon>phone</mat-icon>
+      <mat-icon class="material-icons-outlined">phone</mat-icon>
     </button>
     <mat-menu #phone="matMenu" yPosition="above">
       <button mat-menu-item>
@@ -20,12 +20,12 @@
         Google - Call through Google
       </button>
       <button mat-menu-item >
-        <mat-icon>phone</mat-icon>Phone - 778-456-4352
+        <mat-icon class="material-icons-outlined">phone</mat-icon>Phone - 778-456-4352
       </button>
     </mat-menu>
 
     <button mat-mini-fab [matMenuTriggerFor]="mail">
-      <mat-icon>mail_outline</mat-icon>
+      <mat-icon class="material-icons-outlined">mail_outline</mat-icon>
     </button>
     <mat-menu #mail="matMenu" yPosition="above">
       <button mat-menu-item>
@@ -45,7 +45,7 @@
     </mat-menu>
 
     <button mat-mini-fab [matMenuTriggerFor]="video">
-      <mat-icon>videocam</mat-icon>
+      <mat-icon class="material-icons-outlined">videocam</mat-icon>
     </button>
     <mat-menu #video="matMenu" yPosition="above">
       <button mat-menu-item>
@@ -68,7 +68,7 @@
       </button>
     </mat-menu>
     <button mat-mini-fab [matMenuTriggerFor]="dm">
-      <mat-icon>forum</mat-icon>
+      <mat-icon class="material-icons-outlined">forum</mat-icon>
     </button>
     <mat-menu #dm="matMenu" yPosition="above">
       <button mat-menu-item>
