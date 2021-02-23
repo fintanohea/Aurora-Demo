@@ -17,7 +17,7 @@
       <div class="content">
         <h2>Inbox</h2>
         <button mat-flat-button >
-          <mat-icon aria-hidden="false">add</mat-icon>
+          <mat-icon class="material-icons-outlined" aria-hidden="false">add</mat-icon>
           NEW MESSAGE
         </button>
       </div>
@@ -40,10 +40,10 @@
           <mat-form-field class="filter-input" appearance="outline">
             <mat-label>Search inbox</mat-label>
             <input matInput>
-            <mat-icon matSuffix>search</mat-icon>
+            <mat-icon class="material-icons-outlined" matSuffix>search</mat-icon>
           </mat-form-field>
 
-          <mat-icon matSuffix>filter_alt</mat-icon>
+          <mat-icon class="material-icons-outlined" matSuffix>filter_alt</mat-icon>
         </div>
 
         <div 
@@ -114,7 +114,7 @@
               Subject: {{currentMessage.title}}
             </h4>
             <div class="control-btns">
-                <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
+                <mat-icon class="material-icons-outlined" [matMenuTriggerFor]="menu">more_horiz</mat-icon>
               <mat-menu #menu="matMenu">
                 <button mat-menu-item>
                   <mat-icon class="material-icons-outlined">search</mat-icon>
@@ -126,7 +126,7 @@
                 </button>
               </mat-menu>
 
-              <mat-icon (click)="closeConvo()">clear</mat-icon>
+              <mat-icon class="material-icons-outlined" (click)="closeConvo()">clear</mat-icon>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@
           <mat-form-field class="comment-input" appearance="outline" (keyup.enter)="postComment($event.target.value, currentMessage)">
             <mat-label>Add a comment</mat-label>
             <input matInput>
-            <mat-icon matSuffix>crop_original</mat-icon>
+            <mat-icon class="material-icons-outlined" matSuffix>crop_original</mat-icon>
           </mat-form-field>
         </div>
       </div>
