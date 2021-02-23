@@ -1,17 +1,17 @@
 <button class="notification-button" mat-mini-fab [matMenuTriggerFor]="bell">
-  <mat-icon matBadge="4" matBadgeColor="warn" class="notification-button__icon">notifications_none</mat-icon>
+  <mat-icon class="material-icons-outlined notification-button__icon"  matBadge="4" matBadgeColor="warn">notifications_none</mat-icon>
 </button>
 <mat-menu #bell="matMenu" xPosition="before" class="notification-menu">
   <button mat-menu-item class="notification-menu__button">
-    <mat-icon class="notification-menu__icon_yellow">local_offer</mat-icon>Automated ticket created for new employee
+    <mat-icon class="material-icons-outlined notification-menu__icon_yellow">local_offer</mat-icon>Automated ticket created for new employee
   </button>
   <button mat-menu-item class="notification-menu__button">
-    <mat-icon class="notification-menu__icon_green">thumb_up</mat-icon>Jenn March has submitted progress report
+    <mat-icon class="material-icons-outlined notification-menu__icon_green">thumb_up</mat-icon>Jenn March has submitted progress report
   </button>
   <button mat-menu-item class="notification-menu__button">
-    <mat-icon class="notification-menu__icon_pink">notifications_none</mat-icon>John Wick completed his goal
+    <mat-icon class="material-icons-outlined notification-menu__icon_pink">notifications_none</mat-icon>John Wick completed his goal
   </button>
   <button mat-menu-item class="notification-menu__button">
-    <mat-icon class="notification-menu__icon_blue">local_grocery_store</mat-icon>12 new orders has arrived today
+    <mat-icon class="material-icons-outlined notification-menu__icon_blue">local_grocery_store</mat-icon>12 new orders has arrived today
   </button>
 </mat-menu>

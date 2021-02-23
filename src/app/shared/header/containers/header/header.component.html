@@ -2,10 +2,10 @@
 
   <div class="header__title">
     <button class="header__title-button" mat-mini-fab (click)="openMenu()">
-      <mat-icon *ngIf="!isMenuOpened" class="header__title-button-icon">menu</mat-icon>
-      <mat-icon *ngIf="isMenuOpened" class="header__title-button-icon">arrow_back</mat-icon>
+      <mat-icon class="material-icons-outlined header__title-button-icon"  *ngIf="!isMenuOpened" >menu</mat-icon>
+      <mat-icon class="material-icons-outlined header__title-button-icon"  *ngIf="isMenuOpened" >arrow_back</mat-icon>
     </button>
-    <img src="assets/HubbubHrLogo.png">
+    <img src="assets/HubbubHrLogo.svg">
     <!-- <h6 class="header__title-text">Hubbub HR</h6> -->
   </div>
 
