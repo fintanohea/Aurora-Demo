@@ -121,6 +121,7 @@
     background-image: url(../../../../../assets/auth/login-pattern-bg.svg);
     background-repeat: repeat-x;
     background-position: bottom center;
+    background-size: 330px auto;
 
     @media (max-width: $medium) {
       display: none;

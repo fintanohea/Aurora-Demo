@@ -26,7 +26,7 @@ export class RevenueChartComponent implements OnInit {
       legend: {
         top: 'center',
         right: 'right',
-        data: ['Group A', 'Group B', 'Group C', 'Group D'],
+        data: ['Safety', 'SOP - Mill', 'SOP - Warehouse', 'Superviser'],
         textStyle: {
           color: '#6E6E6E'
         }
@@ -47,19 +47,19 @@ export class RevenueChartComponent implements OnInit {
         avoidLabelOverlap: false,
         data: [
           {
-            name: 'Group A',
+            name: 'Safety',
             value: this.revenueCharData.groupA
           },
           {
-            name: 'Group B',
+            name: 'SOP - Mill',
             value: this.revenueCharData.groupB
           },
           {
-            name: 'Group C',
+            name: 'SOP - Warehouse',
             value: this.revenueCharData.groupC
           },
           {
-            name: 'Group D',
+            name: 'Superviser',
             value: this.revenueCharData.groupD
           },
         ]

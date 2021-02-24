@@ -74,7 +74,7 @@ export class DashboardService {
         28965.5,
         49340.7
       ],
-      firstDataTitle: 'Talent Acquisition',
+      firstDataTitle: 'Salary',
       secondServerChartData: [
         18423.7,
         48423.5,
@@ -82,7 +82,7 @@ export class DashboardService {
         48481.85,
         18487.7
       ],
-      secondDataTitle: 'Sick Pay',
+      secondDataTitle: 'Bonus',
       thirdServerChartData: [
         17114.25,
         27126.6,
@@ -90,7 +90,7 @@ export class DashboardService {
         37203.7,
         17233.75
       ],
-      thirdDataTitle: 'Overtime',
+      thirdDataTitle: 'Vacation Pay',
       dates: [
         '13 Nov 2017',
         '14 Nov 2017',
@@ -157,9 +157,9 @@ export class DashboardService {
   public loadVisitsChartData(): Observable<VisitsChartData> {
     return of({
       data: [7, 6, 3, 8, 10, 6, 7, 8, 3, 0, 7, 6, 2, 7, 4, 7, 3, 6, 2, 3, 8, 1, 0, 4, 9],
-      registration: '860',
-      signOut: '32',
-      rate: '73.25',
+      registration: '4',
+      signOut: '2',
+      rate: '50',
       all: '12.678'
     });
   }

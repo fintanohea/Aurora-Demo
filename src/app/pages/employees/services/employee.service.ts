@@ -16,56 +16,56 @@ export class EmployeeService {
             name: "Tom Jones",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile2.jpg",
-            location: "Vancouver, BC",
+            location: "Johannesburg, South Africa",
             position: "Regional Director"
         },
         {
             name: "Sarah Smith",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile1.jpg",
-            location: "Vancouver, BC",
-            position: "Senior Sale Manager"
+            location: "Toronto, ON",
+            position: "HR Manager"
         },
         {
             name: "Tommy Bowe",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile4.png",
             location: "Vancouver, BC",
-            position: "Digital Marketing Team Lead"
+            position: "Technician"
         },
         {
             name: "Mary Quinn",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile3.jpg",
-            location: "Vancouver, BC",
-            position: "Java Developer"
+            location: "London, UK",
+            position: "IT Analyst"
         },
         {
             name: "Rebecca Jones",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile8.jpg",
             location: "Vancouver, BC",
-            position: "Software App Developer"
+            position: "Software Developer"
         },
         {
             name: "Dave Sterling",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile6.jpg",
-            location: "Vancouver, BC",
+            location: "Toronto, ON",
             position: "Compensation Manager"
         },
         {
             name: "Louis Rossman",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile5.jpg",
-            location: "Vancouver, BC",
+            location: "Dublin, Ireland",
             position: "Analyst Business Development"
         },
         {
             name: "Amanda Burkley",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile7.jpg",
-            location: "Vancouver, BC",
+            location: "Santiago, Chile",
             position: "Client Service Manager"
         }
       ]
