@@ -17,11 +17,13 @@
 
   &__login {
     margin-right: 10px;
+    background-color: $hubbub-primary;
+    color: white;
   }
 
   &__forget {
     font-size: 12px;
     font-weight: $fw-lighter;
-    color: $blue;
+    color: $hubbub-primary;
   }
 }
