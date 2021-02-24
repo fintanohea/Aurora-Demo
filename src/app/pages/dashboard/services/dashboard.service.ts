@@ -158,7 +158,7 @@ export class DashboardService {
     return of({
       data: [7, 6, 3, 8, 10, 6, 7, 8, 3, 0, 7, 6, 2, 7, 4, 7, 3, 6, 2, 3, 8, 1, 0, 4, 9],
       registration: '4',
-      signOut: '2',
+      signOut: '4',
       rate: '50',
       all: '12.678'
     });

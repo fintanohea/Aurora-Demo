@@ -44,7 +44,7 @@ export class EmployeeService {
             name: "Rebecca Jones",
             email: "johnwick@gmail.com",
             profileImg: "/assets/profile-pics/profile8.jpg",
-            location: "Vancouver, BC",
+            location: "Perth, Australia",
             position: "Software Developer"
         },
         {
