@@ -1,0 +1,206 @@
+<div 
+  fxLayout="column" 
+  fxLayoutAlign="space-around center"
+  fxLayoutGap="25px">
+
+  <div 
+    fxLayout="column" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="parent-card personal-information-container">
+
+    <!-- <div class="header">
+      <h3 class="title">
+        Position Details
+      </h3>
+    </div> -->
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="space-between stretch"
+    fxLayoutGap="25px"
+    class="content">
+      <div class="card personal-details">
+        <div 
+          fxLayout="row" 
+          fxLayoutAlign="space-between center"
+          class="header">
+          <h6>Position Details</h6>
+          <mat-icon aria-hidden="false" class="material-icons-outlined" (click)="togglePositionDetailsForm()" aria-label="delete icon">create</mat-icon>
+
+        </div>
+        <div class="content" *ngIf="!showPositionDetailsForm">
+
+          <div *ngFor="let field of positionDetails | keyvalue">
+            <div 
+            fxLayout="row" 
+            fxLayoutAlign="space-between center"
+            class="field">
+              <div>{{field.value.label}}</div>
+              <div>{{field.value.value}}</div>
+            </div>
+          </div>
+
+        </div>
+        <div *ngIf="showPositionDetailsForm" class="content form personal-details-form">
+
+          <form [formGroup]="positionDetailsForm" >
+            <mat-form-field appearance="fill" *ngFor="let field of positionDetails | keyvalue">
+              <mat-label>{{field.value.label}}</mat-label>
+              <input matInput placeholder="{{field.value.label}}" type="text" formControlName="{{field.value.id}}">
+            </mat-form-field>
+
+            <div class="button-container">
+              <button mat-raised-button class="submit-button" type="submit" (click)="updateData(positionDetails, positionDetailsForm.value)" [disabled]="!positionDetailsForm.valid">Submit</button>
+              <button mat-raised-button (click)="togglePositionDetailsForm()">Cancel</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="card marital-status">
+        <div 
+          fxLayout="row" 
+          fxLayoutAlign="space-between center"
+          class="header">
+          <h6>Position Dates</h6>
+          <mat-icon aria-hidden="false" class="material-icons-outlined" (click)="togglePositionDatesForm()" aria-label="delete icon">create</mat-icon>
+        </div>
+        <div *ngIf="!showPositionDatessForm" class="content">
+          <div>
+            <div *ngFor="let field of positionDates | keyvalue">
+              <div 
+              fxLayout="row" 
+              fxLayoutAlign="space-between center"
+              class="field">
+                <div>{{field.value.label}}</div>
+                <div>{{field.value.value}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="showPositionDatessForm" class="content form general-address-form">
+          <form [formGroup]="positionDatesForm" >
+            <mat-form-field appearance="fill" *ngFor="let field of positionDates | keyvalue">
+              <mat-label>{{field.value.label}}</mat-label>
+              <input matInput placeholder="{{field.value.label}}" type="text" formControlName="{{field.value.id}}">
+            </mat-form-field>
+
+            <div class="button-container">
+              <button mat-raised-button class="submit-button" type="submit" (click)="updateData(positionDates, positionDatesForm.value)" [disabled]="!positionDatesForm.valid">Submit</button>
+              <button mat-raised-button (click)="togglePositionDatesForm()">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="card marital-status">
+        <div 
+          fxLayout="row" 
+          fxLayoutAlign="space-between center"
+          class="header">
+          <h6>Employment</h6>
+          <mat-icon aria-hidden="false" class="material-icons-outlined" (click)="toggleEmploymentForm()" aria-label="delete icon">create</mat-icon>
+        </div>
+        <div *ngIf="!showEmploymentsForm" class="content">
+          <div>
+            <div *ngFor="let field of employment | keyvalue">
+              <div 
+              fxLayout="row" 
+              fxLayoutAlign="space-between center"
+              class="field">
+                <div>{{field.value.label}}</div>
+                <div>{{field.value.value}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="showEmploymentsForm" class="content form mailing-address-form">
+          <form [formGroup]="employmentForm" >
+            <mat-form-field appearance="fill" *ngFor="let field of employment | keyvalue">
+              <mat-label>{{field.value.label}}</mat-label>
+              <input matInput placeholder="{{field.value.label}}" type="text" formControlName="{{field.value.id}}">
+            </mat-form-field>
+
+            <div class="button-container">
+              <button mat-raised-button class="submit-button" type="submit" (click)="updateData(employment, employmentForm.value)" [disabled]="!employmentForm.valid">Submit</button>
+              <button mat-raised-button (click)="toggleEmploymentForm()">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- 
+  <div 
+    fxLayout="column" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="parent-card personal-information-container">
+
+    <div class="header">
+      <h2 class="title">
+        Personal Details
+      </h2>
+    </div>
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="content">
+      <div class="card personal-detailss">
+        <div class="header">
+          <h6>Personal Details</h6>
+        </div>
+        <div class="content">
+          
+        </div>
+      </div>
+      <div class="card marital-status">
+        <div class="header">
+          <h6>Marital Status</h6>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div 
+    fxLayout="column" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="parent-card personal-information-container">
+
+    <div class="header">
+      <h2 class="title">
+        Personal Details
+      </h2>
+    </div>
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="content">
+      <div class="card personal-detailss">
+        <div class="header">
+          <h6>Personal Details</h6>
+        </div>
+        <div class="content">
+          
+          
+        </div>
+      </div>
+      <div class="card marital-status">
+        <div class="header">
+          <h6>Marital Status</h6>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+  </div> -->
+
+</div>

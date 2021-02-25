@@ -1,0 +1,45 @@
+@import 'src/app/styles/colors';
+@import 'src/app/styles/variables';
+@import 'src/app/styles/font';
+
+::ng-deep .mat-ink-bar {
+  background-color:$hubbub-primary !important;
+}
+
+.header {
+  align-items: center;
+  color: $grey;
+  display: flex;
+  justify-content: space-between;
+  
+  .profile-pic {
+    margin-top: 10px;
+    object-fit:cover;
+    border-radius: 50%;
+    padding:3px;
+    border:3px solid $gray-015;
+  }
+
+  .details {
+    text-align: center;
+
+    .name {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  
+    .position {
+      color: $sidebar-font-color;
+    }
+  
+    .location {
+      mat-icon {
+        vertical-align: -9px;
+      }
+      margin-left: -10px;
+      color: $sidebar-font-color;
+    }
+  }
+
+}
