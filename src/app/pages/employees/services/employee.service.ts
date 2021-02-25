@@ -15,6 +15,7 @@ export class EmployeeService {
         {
             name: "Tom Jones",
             email: "johnwick@gmail.com",
+            url: "/talent-track",
             profileImg: "/assets/profile-pics/profile2.jpg",
             location: "Johannesburg, South Africa",
             position: "Regional Director"

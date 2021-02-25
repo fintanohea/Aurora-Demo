@@ -62,12 +62,12 @@ export class GeneralComponent implements OnInit{
     },
     city: {
       id: 'city',
-      value: 'Toronto',
+      value: 'Johannesburg',
       label: 'City'
     },
     province: {
       id: 'province',
-      value: 'Ontario',
+      value: 'Gauteng',
       label: 'Province'
     },
     zip: {
@@ -85,12 +85,12 @@ export class GeneralComponent implements OnInit{
     },
     city: {
       id: 'city',
-      value: 'Toronto',
+      value: ' Johannesburg',
       label: 'City'
     },
     province: {
       id: 'province',
-      value: 'Ontario',
+      value: 'Gauteng',
       label: 'Province'
     },
     zip: {
