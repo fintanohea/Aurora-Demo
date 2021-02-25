@@ -1,0 +1,206 @@
+<div 
+  fxLayout="column" 
+  fxLayoutAlign="space-around center"
+  fxLayoutGap="25px">
+
+  <div 
+    fxLayout="column" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="parent-card personal-information-container">
+
+    <!-- <div class="header">
+      <h3 class="title">
+        Personal Details
+      </h3>
+    </div> -->
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="space-between stretch"
+    fxLayoutGap="25px"
+    class="content">
+      <div class="card personal-details">
+        <div 
+          fxLayout="row" 
+          fxLayoutAlign="space-between center"
+          class="header">
+          <h6>Personal Details</h6>
+          <mat-icon aria-hidden="false" class="material-icons-outlined" (click)="togglePersonalDetailsForm()" aria-label="delete icon">create</mat-icon>
+
+        </div>
+        <div class="content" *ngIf="!showPersonalDetailsForm">
+
+          <div *ngFor="let field of personalDetails | keyvalue">
+            <div 
+            fxLayout="row" 
+            fxLayoutAlign="space-between center"
+            class="field">
+              <div>{{field.value.label}}</div>
+              <div>{{field.value.value}}</div>
+            </div>
+          </div>
+
+        </div>
+        <div *ngIf="showPersonalDetailsForm" class="content form personal-details-form">
+
+          <form [formGroup]="personalDetailsForm" >
+            <mat-form-field appearance="fill" *ngFor="let field of personalDetails | keyvalue">
+              <mat-label>{{field.value.label}}</mat-label>
+              <input matInput placeholder="{{field.value.label}}" type="text" formControlName="{{field.value.id}}">
+            </mat-form-field>
+
+            <div class="button-container">
+              <button mat-raised-button class="submit-button" type="submit" (click)="updateData(personalDetails, personalDetailsForm.value)" [disabled]="!personalDetailsForm.valid">Submit</button>
+              <button mat-raised-button (click)="togglePersonalDetailsForm()">Cancel</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="card marital-status">
+        <div 
+          fxLayout="row" 
+          fxLayoutAlign="space-between center"
+          class="header">
+          <h6>General Address</h6>
+          <mat-icon aria-hidden="false" class="material-icons-outlined" (click)="toggleGeneralAddressForm()" aria-label="delete icon">create</mat-icon>
+        </div>
+        <div *ngIf="!showGeneralAddresssForm" class="content">
+          <div>
+            <div *ngFor="let field of generalAddress | keyvalue">
+              <div 
+              fxLayout="row" 
+              fxLayoutAlign="space-between center"
+              class="field">
+                <div>{{field.value.label}}</div>
+                <div>{{field.value.value}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="showGeneralAddresssForm" class="content form general-address-form">
+          <form [formGroup]="generalAddressForm" >
+            <mat-form-field appearance="fill" *ngFor="let field of generalAddress | keyvalue">
+              <mat-label>{{field.value.label}}</mat-label>
+              <input matInput placeholder="{{field.value.label}}" type="text" formControlName="{{field.value.id}}">
+            </mat-form-field>
+
+            <div class="button-container">
+              <button mat-raised-button class="submit-button" type="submit" (click)="updateData(generalAddress, generalAddressForm.value)" [disabled]="!generalAddressForm.valid">Submit</button>
+              <button mat-raised-button (click)="toggleGeneralAddressForm()">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="card marital-status">
+        <div 
+          fxLayout="row" 
+          fxLayoutAlign="space-between center"
+          class="header">
+          <h6>Mailing Address</h6>
+          <mat-icon aria-hidden="false" class="material-icons-outlined" (click)="toggleMailingAddressForm()" aria-label="delete icon">create</mat-icon>
+        </div>
+        <div *ngIf="!showMailingAddresssForm" class="content">
+          <div>
+            <div *ngFor="let field of mailingAddress | keyvalue">
+              <div 
+              fxLayout="row" 
+              fxLayoutAlign="space-between center"
+              class="field">
+                <div>{{field.value.label}}</div>
+                <div>{{field.value.value}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="showMailingAddresssForm" class="content form mailing-address-form">
+          <form [formGroup]="mailingAddressForm" >
+            <mat-form-field appearance="fill" *ngFor="let field of mailingAddress | keyvalue">
+              <mat-label>{{field.value.label}}</mat-label>
+              <input matInput placeholder="{{field.value.label}}" type="text" formControlName="{{field.value.id}}">
+            </mat-form-field>
+
+            <div class="button-container">
+              <button mat-raised-button class="submit-button" type="submit" (click)="updateData(mailingAddress, mailingAddressForm.value)" [disabled]="!mailingAddressForm.valid">Submit</button>
+              <button mat-raised-button (click)="toggleMailingAddressForm()">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- 
+  <div 
+    fxLayout="column" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="parent-card personal-information-container">
+
+    <div class="header">
+      <h2 class="title">
+        Personal Details
+      </h2>
+    </div>
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="content">
+      <div class="card personal-detailss">
+        <div class="header">
+          <h6>Personal Details</h6>
+        </div>
+        <div class="content">
+          
+        </div>
+      </div>
+      <div class="card marital-status">
+        <div class="header">
+          <h6>Marital Status</h6>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div 
+    fxLayout="column" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="parent-card personal-information-container">
+
+    <div class="header">
+      <h2 class="title">
+        Personal Details
+      </h2>
+    </div>
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="25px"
+    class="content">
+      <div class="card personal-detailss">
+        <div class="header">
+          <h6>Personal Details</h6>
+        </div>
+        <div class="content">
+          
+          
+        </div>
+      </div>
+      <div class="card marital-status">
+        <div class="header">
+          <h6>Marital Status</h6>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+  </div> -->
+
+</div>

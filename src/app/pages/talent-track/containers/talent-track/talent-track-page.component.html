@@ -1,0 +1,33 @@
+<app-layout>
+  <mat-card class="employee-page-card">
+    <mat-card-title class="header" fxLayout="column" fxLayoutAlign="space-around center">
+      <div class="profile-pic-container">
+        <img 
+          class="profile-pic"
+          mat-card-image 
+          src="/assets/profile-pics/profile2.jpg">
+      </div>
+      <div class="details" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+        <div>Tom Jones</div>
+        <div>Regional Director</div>
+        <div class="location"><mat-icon class="material-icons-outlined">location_on</mat-icon> Johannesburg, South Africa</div>
+      </div>
+    </mat-card-title>
+  
+    <mat-card-content>
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab label="General">
+          <app-general></app-general>
+        </mat-tab>
+        <mat-tab label="Position">
+          <app-position></app-position>  
+        </mat-tab>
+        <mat-tab label="More Info"></mat-tab>
+        
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+
+  <app-footer></app-footer>
+</app-layout>
+

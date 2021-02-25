@@ -30,6 +30,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/employees/employees.module').then(m => m.EmployeeModule)
   },
   {
+    path: 'talent-track',
+    pathMatch: 'full',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/talent-track/talent-track.module').then(m => m.TalentTrackModule)
+  },
+  {
     path: 'tables',
     pathMatch: 'full',
     canActivate: [AuthGuard],
